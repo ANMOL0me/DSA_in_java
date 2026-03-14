@@ -65,7 +65,7 @@ class ParkingLot {
         }
     }
 
-    // Car leaves parking
+    // Car leaves parking.
     void removeCar() {
 
         if (parkingQueue.isEmpty()) {
