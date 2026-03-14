@@ -73,7 +73,7 @@ class ParkingSystem {
 
     int size = 0;
 
-    // pointer to each car
+    // pointer to each car.
     HashMap<String, Node> carMap = new HashMap<>();
 
     void enterFront(String car) {
