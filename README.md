@@ -1,4 +1,4 @@
-# DSA is coming 
+# DSA - [Daily Solution Analysis] 
 -> Project 1 (https://github.com/ANMOL0me/DSA_in_java/blob/main/finiteautomata.java):- Finite automata (FA) or finite state machines are abstract mathematical models used to recognize patterns within input sequences, acting as the simplest form of computation with finite memory. They process input string symbols, transitioning between a finite set of states based on rules, ultimately accepting or rejecting strings based on the final state.e
 
 -> Project 2 (https://github.com/ANMOL0me/DSA_in_java/blob/main/Propositional_Logic.java):- Its is topic of 2nd year Btech Discrete Mathematics System. Propositional logic is a branch of mathematical logic that studies how propositions—statements that are strictly true or false—interact and combine using logical operators. It uses symbols to analyze the structure of arguments, determining their validity regardless of the specific content.
