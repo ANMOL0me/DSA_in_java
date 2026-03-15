@@ -1,5 +1,5 @@
 import java.util.*;
-
+//based on DSA concept
 public class Parking_System {
 
     public static void main(String[] args) {
