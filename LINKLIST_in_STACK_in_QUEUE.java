@@ -1,4 +1,6 @@
+// LINKLIST->STACK->QUEUES
 import java.util.*;
+
 public class LINKLIST_in_STACK_in_QUEUE {
 
     public static void main(String[] args) {
