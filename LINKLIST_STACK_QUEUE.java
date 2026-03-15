@@ -1,19 +1,19 @@
-class LinkList {
+class node {
+    String data ;
+    Node prev;
+    Node next;
 
-    int[] stack = new int[5];
-    int ptr;
-
-    void display_linklist() {
-
-        System.out.println(stack[0]);
-        System.out.println(stack[1]);
-        System.out.println(stack[2]);
-        System.out.println(stack[3]);
-        System.out.println(stack[4]);
+    void insert(String data) {
+    String[] info = new String[4] ; 
+    this.data = data;
+    data = info ;
+    prev = null;
+    next = null ;
+        
     }
 }
 
-public class SQL {
+public class LINKLIST_STACK_QUEUE {
 
     public static void main(String[] args) {
 
