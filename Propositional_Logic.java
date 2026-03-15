@@ -1,5 +1,5 @@
 import java.util.Scanner;
-//discrete mathematics unit 3
+//discrete mathematics 
 public class Propositional_Logic {
 
     public static void main(String[] args) {
