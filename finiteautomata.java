@@ -1,4 +1,4 @@
-//how finite automata works.
+//how finite automata works..
     import java.util.Scanner;
 
 public class finiteautomata {
