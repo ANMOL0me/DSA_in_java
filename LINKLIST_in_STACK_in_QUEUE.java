@@ -77,7 +77,7 @@ class LinkedListSystem {
         }
     }
 
-    // display structure
+    // display 
     void display() {
 
         Node temp = head;
