@@ -1,36 +1,41 @@
-
 import java.util.*;
-class search{
 
-    void bubblesort(int arrs[]){
-        for (int i = 0 ;i < 5; i++)
-            if (arrs[i] < arrs[i+1]){
-            temp = arrs[i+1]; 
-            arrs[i+1] = arrs[i];
-            temp = arrs[i];
-        System.out.println(arrs[i]+","+arrs[i+1]);    
-        } 
-            else{
-                System.out.println(arrs[i] + ">" + arrs[i+1] );
+class Search {
+
+    void bubblesort(int arr[]) {
+        int temp;
+
+        for (int i = 0; i < 5; i++) {
+            if (arr[i] > arr[i + 1]) {
+
+                temp = arr[i + 1];
+                arr[i + 1] = arr[i];
+                arr[i] = temp;
+            
+                System.out.println(arr[0]+","+arr[1]+","+arr[2]+","+arr[3]+","+arr[4]);
+        
+             }
+            else {
+                //System.out.println(arr[i] + " < " + arr[i + 1]);
             }
         }
-
-
+        
     }
 
 }
 
 public class Searching_Techniques {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int[] arr = new[5] int;
-        int temp;
-        for (int i = 0; i < 5; i++) {
-        int arr[i] = sc.nextLine();    
-        }
-        search obj = new search;
-        obj.bubblesort(arr[i]);
 
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int arr[] = new int[5];
+
+        for (int i = 0; i < 5; i++) {
+            arr[i] = sc.nextInt();
+        }
+       System.out.println(arr[0]+","+arr[1]+","+arr[2]+","+arr[3]+","+arr[4]);
+        Search obj = new Search();
+        obj.bubblesort(arr);
     }
-    
 }
