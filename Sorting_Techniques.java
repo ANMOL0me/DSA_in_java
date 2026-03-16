@@ -61,7 +61,7 @@ class Ch {
         int choice;
 
         System.out.println("1 for Bubble Sort");
-        System.out.println("2 for Insertion Sort");git
+        System.out.println("2 for Insertion Sort\n3 for both");
 
         choice = sc.nextInt();
 
@@ -76,6 +76,10 @@ class Ch {
                 obj.insertionsort(arr);
                 
                 break;
+            case 3:
+                obj.insertionsort(arr);
+                obj.bubblesort(arr);
+                break;    
 
             default:
                 System.out.println("Invalid choice");
@@ -89,6 +93,7 @@ public class Sorting_Techniques {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+        System.out.println("Type 5 number to sort");
 
         int arr[] = new int[5];
 
