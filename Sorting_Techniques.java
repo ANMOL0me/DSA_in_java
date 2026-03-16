@@ -47,14 +47,15 @@ class Search {
         }
 
         System.out.println("Sorting done");
+
     }
 }
 
 class Ch {
 
-    Ch(Search obj, int arr[]) {
+    Ch(Search obj, int arr[],Scanner sc ) {
 
-        Scanner sc = new Scanner(System.in);
+        
 
         int choice;
 
@@ -67,19 +68,22 @@ class Ch {
 
             case 1:
                 obj.bubblesort(arr);
+                
                 break;
 
             case 2:
                 obj.insertionsort(arr);
+                
                 break;
 
             default:
                 System.out.println("Invalid choice");
+                break ;
         }
     }
 }
 
-public class Searching_Techniques {
+public class Sorting_Techniques {
 
     public static void main(String[] args) {
 
@@ -95,6 +99,6 @@ public class Searching_Techniques {
 
         Search obj = new Search();
 
-        Ch obj1 = new Ch(obj, arr);
+        Ch obj1 = new Ch(obj, arr,sc);
     }
 }
