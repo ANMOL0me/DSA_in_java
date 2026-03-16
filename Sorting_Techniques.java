@@ -4,6 +4,7 @@ import java.util.*;
 class Search {
 
     void bubblesort(int arr[]) {
+        System.out.println("-----BUBBLE SORT-----");
 
         int temp;
 
@@ -29,6 +30,7 @@ class Search {
     }
 
     void insertionsort(int arr[]) {
+        System.out.println("-----INSERTION SORT-----");
 
         int key, j;
 
@@ -61,7 +63,7 @@ class Ch {
         int choice;
 
         System.out.println("1 for Bubble Sort");
-        System.out.println("2 for Insertion Sort\n3 for both");
+        System.out.println("2 for Insertion Sort\n3 for both\t");
 
         choice = sc.nextInt();
 
