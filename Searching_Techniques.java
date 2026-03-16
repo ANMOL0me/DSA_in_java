@@ -4,7 +4,7 @@ class Search {
 
     void bubblesort(int arr[]) {
         int temp;
-
+if(arr[0] < arr[4]){
         for (int i = 0; i < 5; i++) {
             if (arr[i] > arr[i + 1]) {
 
@@ -16,10 +16,18 @@ class Search {
         
              }
             else {
-                //System.out.println(arr[i] + " < " + arr[i + 1]);
+              System.out.println(arr[0]+","+arr[1]+","+arr[2]+","+arr[3]+","+arr[4]);
+        
             }
         }
+        System.out.println("loop");
+        bubblesort(arr) ;
+    }
+    else{
+        System.out.println("Sorting done");
+        System.out.println(arr[0]+","+arr[1]+","+arr[2]+","+arr[3]+","+arr[4]);
         
+    }
     }
 
 }
