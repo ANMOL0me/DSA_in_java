@@ -11,34 +11,34 @@ class LoginSystem {
     public void register(String username, String password) {
 
         if (username.isEmpty() || password.isEmpty()) {
-            System.out.println("⚠ Invalid input!");
+            System.out.println("Invalid input!");
             return;
         }
 
         if (users.containsKey(username)) {
-            System.out.println("⚠ User already exists!");
+            System.out.println(" User already exists!");
             return;
         }
 
         int hashed = hashpassword(password);
         users.put(username, hashed);
 
-        System.out.println("✅ User registered successfully!");
+        System.out.println(" User registered successfully!");
     }
 
     public void login(String username, String password) {
 
         if (!users.containsKey(username)) {
-            System.out.println("❌ User not found!");
+            System.out.println(" User not found!");
             return;
         }
 
         int hashed = hashpassword(password);
 
         if (users.get(username).equals(hashed)) {
-            System.out.println("✅ Login successful!");
+            System.out.println(" Login successful!");
         } else {
-            System.out.println("❌ Wrong password!");
+            System.out.println(" Wrong password!");
         }
     }
 
