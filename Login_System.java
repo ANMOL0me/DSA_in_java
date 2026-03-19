@@ -1,42 +1,47 @@
 import java.util.*;
 
-class loginsystem {
+class LoginSystem {
 
     private HashMap<String, Integer> users = new HashMap<>();
 
-    // Hash function for password
     private int hashpassword(String password) {
-        return password.hashCode(); // simple hashing
+        return password.hashCode();
     }
 
-    // Register user
     public void register(String username, String password) {
-        if(username =! users.username){
-        
+
+        if (username.isEmpty() || password.isEmpty()) {
+            System.out.println("⚠ Invalid input!");
+            return;
+        }
+
+        if (users.containsKey(username)) {
+            System.out.println("⚠ User already exists!");
+            return;
+        }
+
         int hashed = hashpassword(password);
         users.put(username, hashed);
-        System.out.println("User registered successfully!");
-    }else{
-        System.out.println("User already exists.. ");
+
+        System.out.println("✅ User registered successfully!");
     }
-    }
-    // Login user
+
     public void login(String username, String password) {
+
         if (!users.containsKey(username)) {
-            System.out.println("User not found!");
+            System.out.println("❌ User not found!");
             return;
         }
 
         int hashed = hashpassword(password);
 
-        if (users.get(username) == hashed) {
-            System.out.println("Login successful ");
+        if (users.get(username).equals(hashed)) {
+            System.out.println("✅ Login successful!");
         } else {
-            System.out.println("Wrong password ");
+            System.out.println("❌ Wrong password!");
         }
     }
 
-    // Display all users (for testing)
     public void displayusers() {
         System.out.println(users);
     }
@@ -44,13 +49,14 @@ class loginsystem {
 
 public class Login_System {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
-        loginsystem system = new loginsystem();
+        LoginSystem system = new LoginSystem();
 
         while (true) {
             System.out.println("\n1. Register\n2. Login\n3. Exit");
             int choice = sc.nextInt();
-            sc.nextLine(); // clear buffer
+            sc.nextLine();
 
             if (choice == 1) {
                 System.out.print("Enter username: ");
@@ -74,7 +80,6 @@ public class Login_System {
                 break;
             }
         }
-
         sc.close();
     }
 }
