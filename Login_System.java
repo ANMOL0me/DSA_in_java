@@ -58,7 +58,8 @@ public class Login_System {
             int choice = sc.nextInt();
             sc.nextLine();
 
-            if (choice == 1) {
+            if ( choice == 1 )
+            {
                 System.out.print("Enter username: ");
                 String user = sc.nextLine();
 
