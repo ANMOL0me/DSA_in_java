@@ -111,7 +111,7 @@ public class Train_Booking_Managnment_System {
     // UI Menu
     static void showMenu() {
         System.out.println("\n=================================");
-        System.out.println("   🚆 TRAIN MANAGEMENT SYSTEM   ");
+        System.out.println("     TRAIN MANAGEMENT SYSTEM   ");
         System.out.println("=================================");
         System.out.println("1. Add Passenger");
         System.out.println("2. Remove Passenger");
@@ -141,7 +141,7 @@ public class Train_Booking_Managnment_System {
 
                     Coach coach = searchCoach(root, c1);
                     if (coach == null) {
-                        System.out.println("⚠ Coach Not Found!");
+                        System.out.println(" Coach Not Found!");
                         break;
                     }
 
@@ -160,7 +160,7 @@ public class Train_Booking_Managnment_System {
 
                     Coach coach2 = searchCoach(root, c2);
                     if (coach2 == null) {
-                        System.out.println("⚠ Coach Not Found!");
+                        System.out.println(" Coach Not Found!");
                         break;
                     }
 
@@ -176,11 +176,11 @@ public class Train_Booking_Managnment_System {
                     break;
 
                 case 4:
-                    System.out.println("🙏 Exiting System...");
+                    System.out.println(" Exiting System...");
                     System.exit(0);
 
                 default:
-                    System.out.println("⚠ Invalid Choice!");
+                    System.out.println(" Invalid Choice!");
             }
         }
     }
