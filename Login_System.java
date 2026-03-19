@@ -10,7 +10,14 @@ class loginsystem {
     }
 
     // Register user
-    
+    public void register(String username, String password) {
+        if(username =! users.username){
+        
+        int hashed = hashpassword(password);
+        users.put(username, hashed);
+        System.out.println("User registered successfully!");
+    }else{
+        System.out.println("User already exists.. ");
     }
     }
     // Login user
