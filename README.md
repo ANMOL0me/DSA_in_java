@@ -1,7 +1,7 @@
 # DSA - [Daily Solution Analysis] 
 -> [Project 1](https://github.com/ANMOL0me/DSA_in_java/blob/main/finiteautomata.java) :- Finite automata (FA) or finite state machines are abstract mathematical models used to recognize patterns within input sequences, acting as the simplest form of computation with finite memory. They process input string symbols, transitioning between a finite set of states based on rules, ultimately accepting or rejecting strings based on the final state.e
 
--> Project 2 :- Its is topic of 2nd year Btech Discrete Mathematics System. Propositional logic is a branch of mathematical logic that studies how propositions—statements that are strictly true or false—interact and combine using logical operators. It uses symbols to analyze the structure of arguments, determining their validity regardless of the specific content.
+-> [Project 2](https://github.com/ANMOL0me/DSA_in_java/blob/main/Propositional_Logic.java) :- Its is topic of 2nd year Btech Discrete Mathematics System. Propositional logic is a branch of mathematical logic that studies how propositions—statements that are strictly true or false—interact and combine using logical operators. It uses symbols to analyze the structure of arguments, determining their validity regardless of the specific content.
 
 -> Project 3 :-The program simulates a car parking system using a Queue data structure from Data Structures and Algorithms.The queue follows the FIFO (First In First Out) rule, meaning the car that enters first leaves first.parkCar() adds a car to the queue if parking is not full, while removeCar() removes the first car using poll().The displayCars() method shows all parked cars, and the menu in main() lets the user park, remove, or view cars interactively.
 
