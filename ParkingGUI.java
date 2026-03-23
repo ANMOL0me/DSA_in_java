@@ -1,4 +1,4 @@
-import java.awt.*;
+ import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
 
@@ -97,7 +97,7 @@ public class ParkingGUI extends Frame implements ActionListener {
 
     public static void main(String[] args) {
         new ParkingGUI();
-    }
+   }
 }
 
 // Node Class
