@@ -12,4 +12,7 @@ class PetrolPump {
         int choice;
         double liters, amount;
 
+        System.out.println("===== Welcome to Petrol Pump =====");
+        System.out.println("1. Petrol");
+        System.out.println("2. Diesel");
  
