@@ -25,6 +25,12 @@ public class Petrol_Pump extends Frame implements ActionListener {
 
         receipt = new TextArea(8,30);
 
+        
+        add(petrol);
+        add(diesel);
+        add(l1);
+        add(quantity);
+        add(receipt);
 
         petrol.addActionListener(this);
         diesel.addActionListener(this);
