@@ -25,4 +25,4 @@
 
 -> [Project 11](https://github.com/ANMOL0me/DSA_in_java/blob/main/Petrol_Pump.java) :- This Java program creates a Petrol Pump GUI application using AWT where the user can enter the number of litres in a TextField.It provides two buttons (Petrol and Diesel) and uses ActionListener to detect which fuel button the user clicks.When a button is pressed, the program calculates the total cost by multiplying the entered litres with the fuel price (petrolPrice or dieselPrice).The receipt with fuel type, price per litre, litres, and total amount is displayed in the TextArea.
 
-![alt text](Screenshot 2026-03-25 223630.png)  ![alt text](Screenshot 2026-03-25 223641.png)
+![alt text](p11.png)   ![alt text](p12.png)
