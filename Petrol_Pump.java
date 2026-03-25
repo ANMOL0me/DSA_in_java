@@ -8,3 +8,8 @@ class PetrolPump {
 
         double petrolPrice = 106.5;
         double dieselPrice = 94.2;
+
+        int choice;
+        double liters, amount;
+
+ 
