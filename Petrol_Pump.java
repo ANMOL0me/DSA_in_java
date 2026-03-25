@@ -6,3 +6,5 @@ class PetrolPump {
 
         Scanner sc = new Scanner(System.in);
 
+        double petrolPrice = 106.5;
+        double dieselPrice = 94.2;
