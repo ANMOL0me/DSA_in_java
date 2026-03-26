@@ -19,3 +19,35 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
     int appleX;
     int appleY;
 
+    char direction = 'R';
+    boolean running = false;
+
+    Timer timer;
+    Random random;
+
+    SnakeGame() {
+        random = new Random();
+        this.setPreferredSize(new Dimension(WIDTH, HEIGHT));
+        this.setBackground(Color.black);
+        this.setFocusable(true);
+        this.addKeyListener(this);
+        startGame();
+    }
+
+    public void startGame() {
+        newApple();
+        running = true;
+        timer = new Timer(DELAY, this);
+        timer.start();
+    }
+
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        draw(g);
+    }
+
+    public void draw(Graphics g) {
+
+        if (running) {
+
+ 
