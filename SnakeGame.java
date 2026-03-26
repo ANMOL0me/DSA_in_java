@@ -41,5 +41,46 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
         timer.start();
     }
 
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        draw(g);
+    }
 
+    public void draw(Graphics g) {
+
+        if (running) {
+           g.setColor(Color.red);
+            g.fillOval(appleX, appleY, UNIT_SIZE, UNIT_SIZE);
+
+            for (int i = 0; i < bodyParts; i++) {
+                if (i == 0) {
+                    g.setColor(Color.green);
+                    g.fillRect(x[i], y[i], UNIT_SIZE, UNIT_SIZE);
+                } else {
+                    g.setColor(new Color(45,180,0));
+                    g.fillRect(x[i], y[i], UNIT_SIZE, UNIT_SIZE);
+                }
+            }
+
+            g.setColor(Color.white);
+            g.setFont(new Font("Arial",Font.BOLD,20));
+            g.drawString("Score: "+applesEaten,10,20);
+        }
+
+        else {
+            gameOver(g);
+        }
+    }
+
+    public void newApple() {
+        appleX = random.nextInt((int)(WIDTH/UNIT_SIZE))*UNIT_SIZE;
+        appleY = random.nextInt((int)(HEIGHT/UNIT_SIZE))*UNIT_SIZE;
+    }
+
+    public void move() {
+
+        for(int i = bodyParts; i > 0; i--) {
+            x[i] = x[i-1];
+            y[i] = y[i-1];
+ 
  
