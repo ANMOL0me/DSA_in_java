@@ -127,3 +127,55 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
         g.setFont(new Font("Arial",Font.BOLD,20));
         g.drawString("Score: "+applesEaten,250,350);
     }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+        if(running) {
+            move();
+            checkApple();
+            checkCollisions();
+        }
+
+        repaint();
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+
+        switch(e.getKeyCode()) {
+            case KeyEvent.VK_LEFT:
+                if(direction!='R') direction='L';
+                break;
+
+            case KeyEvent.VK_RIGHT:
+                if(direction!='L') direction='R';
+                break;
+
+            case KeyEvent.VK_UP:
+                if(direction!='D') direction='U';
+                break;
+
+            case KeyEvent.VK_DOWN:
+                if(direction!='U') direction='D';
+                break;
+        }
+    }
+
+    @Override public void keyReleased(KeyEvent e) {}
+    @Override public void keyTyped(KeyEvent e) {}
+
+    public static void main(String[] args) {
+
+        JFrame frame = new JFrame();
+        SnakeGame gamePanel = new SnakeGame();
+
+        frame.add(gamePanel);
+        frame.setTitle("Snake Game");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setResizable(false);
+        frame.pack();
+        frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
+    }
+}
