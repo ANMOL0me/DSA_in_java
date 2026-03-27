@@ -44,3 +44,121 @@ public class ParkingGUI extends Frame implements ActionListener {
         // Output area
         displayArea = new TextArea(10, 40);
         add(displayArea);
+
+        // Register events
+        frontBtn.addActionListener(this);
+        rearBtn.addActionListener(this);
+        middleBtn.addActionListener(this);
+        exitBtn.addActionListener(this);
+        displayBtn.addActionListener(this);
+
+        // Window close
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                System.exit(0);
+            }
+        });
+
+        setSize(400, 400);
+        setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+
+        String car = carField.getText();
+
+        if (e.getSource() == frontBtn) {
+            parking.enterFront(car);
+            displayArea.append(car + " entered from FRONT\n");
+        }
+
+        else if (e.getSource() == rearBtn) {
+            parking.enterRear(car);
+            displayArea.append(car + " entered from REAR\n");
+        }
+
+        else if (e.getSource() == middleBtn) {
+            boolean permission = permissionBox.getState();
+            parking.enterMiddle(car, permission);
+            displayArea.append(car + " tried MIDDLE entry\n");
+        }
+
+        else if (e.getSource() == exitBtn) {
+            parking.removeCar(car);
+            displayArea.append(car + " removed\n");
+        }
+
+        else if (e.getSource() == displayBtn) {
+            displayArea.append("Parking: " + parking.getDisplay() + "\n");
+        }
+
+        carField.setText("");
+    }
+
+    public static void main(String[] args) {
+        new ParkingGUI();
+   }
+}
+
+// Node Class
+class Node {
+    String carNumber;
+    Node prev, next;
+
+    Node(String carNumber) {
+        this.carNumber = carNumber;
+    }
+}
+
+// Parking System Logic (Same as yours with small addition)
+class ParkingSystem {
+
+    Node front = null, rear = null, mid1 = null, mid2 = null;
+    int size = 0;
+
+    HashMap<String, Node> carMap = new HashMap<>();
+
+    void enterFront(String car) {
+        Node newNode = new Node(car);
+
+        if (front == null) {
+            front = rear = mid1 = mid2 = newNode;
+        } else {
+            newNode.next = front;
+            front.prev = newNode;
+            front = newNode;
+        }
+
+        carMap.put(car, newNode);
+        size++;
+        updateMiddle();
+    }
+
+    void enterRear(String car) {
+        Node newNode = new Node(car);
+
+        if (rear == null) {
+            front = rear = mid1 = mid2 = newNode;
+        } else {
+            rear.next = newNode;
+            newNode.prev = rear;
+            rear = newNode;
+        }
+
+        carMap.put(car, newNode);
+        size++;
+        updateMiddle();
+    }
+
+    void enterMiddle(String car, boolean permission) {
+        if (!permission) return;
+
+        Node newNode = new Node(car);
+
+        if (mid1 == null) {
+            front = rear = mid1 = mid2 = newNode;
+        } else {
+            Node next = mid1.next;
+
+            mid1.next = newNode;
+ 
