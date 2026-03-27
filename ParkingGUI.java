@@ -1,33 +1,3 @@
- import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
-
-// Main GUI Class
-public class ParkingGUI extends Frame implements ActionListener {
-
-    TextField carField;
-    Checkbox permissionBox;
-    TextArea displayArea;
-
-    Button frontBtn, rearBtn, middleBtn, exitBtn, displayBtn;
-
-    ParkingSystem parking = new ParkingSystem();
-
-    public ParkingGUI() {
-
-        setTitle("Parking System");
-
-        setLayout(new FlowLayout());
-
-        // Input field
-        add(new Label("Car Number:"));
-        carField = new TextField(15);
-        add(carField);
-
-        // Permission checkbox
-        permissionBox = new Checkbox("Middle Permission");
-        add(permissionBox);
-
         // Buttons
         frontBtn = new Button("Enter Front");
         rearBtn = new Button("Enter Rear");
@@ -161,4 +131,69 @@ class ParkingSystem {
             Node next = mid1.next;
 
             mid1.next = newNode;
- 
+            newNode.prev = mid1;
+            newNode.next = next;
+
+            if (next != null)
+                next.prev = newNode;
+            else
+                rear = newNode;
+        }
+
+        carMap.put(car, newNode);
+        size++;
+        updateMiddle();
+    }
+
+    void removeCar(String car) {
+        Node target = carMap.get(car);
+
+        if (target == null) return;
+
+        Node prev = target.prev;
+        Node next = target.next;
+
+        if (prev != null)
+            prev.next = next;
+        else
+            front = next;
+
+        if (next != null)
+            next.prev = prev;
+        else
+            rear = prev;
+
+        carMap.remove(car);
+        size--;
+        updateMiddle();
+    }
+
+    void updateMiddle() {
+        Node temp = front;
+        int count = 0;
+
+        int m1 = size / 2;
+        int m2 = (size / 2) - 1;
+
+        while (temp != null) {
+            if (count == m1) mid1 = temp;
+            if (count == m2) mid2 = temp;
+            temp = temp.next;
+            count++;
+        }
+    }
+
+    // NEW method for GUI
+    String getDisplay() {
+        StringBuilder sb = new StringBuilder();
+        Node temp = front;
+
+        while (temp != null) {
+            sb.append(temp.carNumber).append(" -> ");
+            temp = temp.next;
+        }
+
+        sb.append("NULL");
+        return sb.toString();
+    }
+}
