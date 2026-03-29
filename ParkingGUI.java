@@ -228,6 +228,3 @@ class ParkingSystem {
     }
 }
 
-class anmol{
-    
-}
