@@ -225,5 +225,5 @@ class ParkingSystem {
 
         sb.append("NULL");
         return sb.toString();
-    }IfTree
+    }
 }
