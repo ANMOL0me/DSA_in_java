@@ -57,15 +57,15 @@ public class Petrol_Pump extends Frame implements ActionListener {
 
             amount = litres * dieselPrice;
 
+
             receipt.setText("Fuel : Diesel\n");
             receipt.append("Price/Litre : " + dieselPrice + "\n");
+
             receipt.append("Litres : " + litres + "\n");
             receipt.append("Total Amount : ₹" + amount);
         }
-    }
+}
 
-    public static void main(String[] args) {
 
         new Petrol_Pump();
     }
-}
