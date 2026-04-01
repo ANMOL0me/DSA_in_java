@@ -133,7 +133,6 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
 
         if(running) {
             move();
-            checkApple();
             checkCollisions();
         }
 
