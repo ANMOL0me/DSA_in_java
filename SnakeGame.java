@@ -129,10 +129,10 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(A
+            checkApple();ctionEvent e) {
 
-        if(running) {
-            move();
+        if(running)
             checkCollisions();
         }
 
