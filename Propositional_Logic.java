@@ -28,7 +28,8 @@ public class Propositional_Logic {
         System.out.println("\nResults of Propositional Logic:");
 
         System.out.println("Conjunction: " + p_var + " AND " + q_var + " = " + andResult);
-        System.out.println("Disjunction: " + p_var + " OR " + q_var + " = " + orResult);
+        System.out.println("Disjunction: }\r\n" + //
+                        "" + p_var + " OR " + q_var + " = " + orResult);
         System.out.println("Negation: NOT " + p_var + " = " + notP);
         System.out.println("Implication: If " + p_var + " then " + q_var + " = " + implies);
         System.out.println("Biconditional: " + p_var + " iff " + q_var + " = " + biconditional);
