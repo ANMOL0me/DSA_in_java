@@ -6,4 +6,3 @@ system.out.print("hello day 1");
     public static void main(String[] args)
 system.out.print("hello day 1");
 
-}
