@@ -18,5 +18,4 @@ System.out.println("child class function");
 public class Multilevel_inheritance{
 public static void main(String[] args){
 child obj = new child();
-
 }}
