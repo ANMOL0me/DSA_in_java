@@ -10,7 +10,7 @@ child(){
 System.out.println("Child class function");
 }
 }
-public class inheritance{
+public class single_inheritance{
 public static void main(String[] args){
 child obj = new child() ;
 }
