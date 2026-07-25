@@ -12,7 +12,7 @@ System.out.println("interafce_2 function");
 
 public class Multiple_inheritance{
 public static void main(String[] args){
-class1 obj = new class1() ;
-obj.fun1;
-obj.fun2;
+face1 obj0 = new class1();
+face2 obj1 = new class1();
+obj0.fun1();
 }}
